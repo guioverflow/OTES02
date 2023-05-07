@@ -1,0 +1,91 @@
+<html>
+    <head>
+        <title>Exercício 5</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">        
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Mono:wght@300&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"/>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/pure-min.css" integrity="sha384-X38yfunGUhNzHpBaEBsWLO+A0HDYOQi8ufWDkZ0k9e0eXz/tH3II7uKZ9msv++Ls" crossorigin="anonymous"/>
+        <link rel="stylesheet" href="index.css"/>
+    </head>
+
+    <!--
+        1-Faça um formulário com 3 campos de texto, alterar para letras maiúsculas e minúsculas através de checkbox. Ver exemplo 6. 
+        2- Crie um formulário com 4 campos, sendo todos obrigatórios. Na submissão, verificar se os dados obrigatórios foram informados, mostre o erro ocorrido ou 'Sucesso' através de janela alert. Ver exemplo 10.
+        3- Ler o nome do usuário (via prompt) e imprimir a mensagem:
+        "Bom dia, boa tarde ou boa noite (de acordo com o horário atual), NOME INFORMADO, hoje é: dia da semana, dia/mês/ano."
+        Ex. Boa Noite, Maria, hoje é quarta-feira, 05/04/2023.
+        4- Crie um exemplo livre de uso de Javascript, baseado no material estudado.
+    -->
+    <body>
+        <div class="questoes">  
+            <div class="questao-wrapper">
+                <h1 class="titulo-questao">Questão 1</h1>
+                <fieldset>
+                    <form id="formulario-1" name="formulario-1" action="" class="pure-form pure-form-aligned">
+                        <div class="pure-control-group">
+                            <label for="nome-completo">Candidato</label>
+                            <input class="pure-input-rounded" type="text" name="nome-completo" id="nome-completo" placeholder="Nome completo">
+                        </div>
+                        
+                        <div class="pure-control-group">
+                            <label for="nome-pai">Pai</label>
+                            <input class="pure-input-rounded" type="text" name="nome-pai" id="nome-pai" placeholder="Nome completo">
+                        </div>
+    
+                        <div class="pure-control-group">
+                            <label for="nome-mae">Mãe</label>
+                            <input class="pure-input-rounded" type="text" name="nome-mae" id="nome-mae" placeholder="Nome completo">
+                        </div>
+                        
+                        <div class="pure-control-group">
+                            <div class="container-alternador">
+                                <input class="pure-checkbox" type="checkbox" name="alternador" id="alternador">
+                                <label for="alternador" id="texto-caps">CAIXA ALTA</label>
+                            </div>
+                        </div>
+
+                        <div class="container-botao">
+                            <input class="botao-submit pure-button" type="submit" name="botao-submit-1" id="botao-submit-1">
+                        </div>
+                    </form>
+                </fieldset>
+            </div>
+
+            <div class="questao-wrapper">
+                <h1 class="titulo-questao">Questão 2</h1>
+                <fieldset>
+                    <form id="formulario-2" name="formulario-2" action="" onsubmit="return checaCampoPreenchido()" class="pure-form pure-form-aligned">
+                        <div class="pure-control-group">
+                            <label for="nome">Nome<span class="obrigatorio">*</span></label>
+                            <input class="pure-input-rounded" type="text" name="nome" id="nome" placeholder="Nome completo">
+                        </div>
+                        
+                        <div class="pure-control-group">
+                            <label for="email-usuario">E-mail<span class="obrigatorio">*</span></label>
+                            <input class="pure-input-rounded" type="email" name="email-usuario" id="email-usuario" placeholder="user@dominio.com">
+                        </div>
+    
+                        <div class="pure-control-group">
+                            <label for="telefone">Telefone<span class="obrigatorio">*</span></label>
+                            <input class="pure-input-rounded" type="tel" name="telefone" id="telefone" placeholder="+55 (11) 98891-2341">
+                        </div>
+    
+                        <div class="container-botao">
+                            <input class="botao-submit pure-button" type="submit" name="botao-submit-1" id="botao-submit-2">
+                        </div>
+                    </form>
+                </fieldset>
+            </div>
+
+            <div id="circulo" class="circulo"></div>
+        </div>
+    </body>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="index.js"></script>
+</html>

@@ -1,0 +1,115 @@
+:root {
+    --dark: #100B00;
+    --light: #f1f2f6;
+    --dominant: #aeb8fe;
+    --secundaria: #691aaf7f;
+}
+
+.circulo {
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(to top left, #0062bE, #00A2FE);
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: 0 !important;
+    pointer-events: none;
+    mix-blend-mode: multiply;
+    z-index: 10;
+}
+
+label {
+    display: inline-block;
+}
+
+
+* {
+    margin: 15px !important;
+    cursor: none !important;
+}
+
+.obrigatorio {
+    color: var(--dominant);
+}
+
+.container-alternador {
+    display: flex;
+    justify-content: right;
+}
+
+html, body {
+    margin: 0 !important;
+}
+
+body {
+    background-color: var(--dominant);
+    background: linear-gradient(217deg, rgba(146, 20, 255, 0.8), rgba(255,0,0,0) 70.71%),
+                linear-gradient(127deg, rgba(0, 238, 255, 0.8), rgba(0,255,0,0) 70.71%),
+                linear-gradient(336deg, rgba(0,0,255,.8), rgba(0,0,255,0) 70.71%);
+    color: var(--light);
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto Mono', monospace;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    letter-spacing: 2px;
+}
+
+#alternador {
+    display: inline-block;
+}
+
+
+input[type="checkbox"] {
+    transform: scale(1.5);
+}
+
+input:not([type="submit"]):not([type="checkbox"]), select, label {
+    width: 50%;
+}
+
+input[type="submit"] {
+    width: 30%;
+    box-shadow: 2px 2px 5px black;
+}
+
+input[type="text"]:hover,
+input[type="email"]:hover,
+input[type="tel"]:hover,
+select:hover {
+    box-shadow: 2px 2px 10px purple,
+                -2px -2px 5px purple;
+}
+
+.questao-wrapper {
+    background-color: var(--secundaria);
+    border-radius: 5%;
+    box-shadow: 1px 1px 5px black;
+}
+
+.titulo-questao {
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.questoes {
+    display: flex;
+    justify-content: center;
+}
+
+
+.container-botao { 
+    display: flex;
+    justify-content: right;
+}
+
+.botao-submit {
+    color: white;
+    border-radius: 4px;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+    background: #5f12a4e2;
+}
+
+
